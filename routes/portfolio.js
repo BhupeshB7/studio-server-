@@ -11,6 +11,7 @@ router.use(expressFileUpload());
 // Your route definition
 router.post('/create', portfolioController.createPost);
 router.get('/posts', portfolioController.getAllPosts);
+router.get('/recent', portfolioController.getAllRecentPosts);
 router.get('/posts/:id', portfolioController.getSinglePost); 
 router.delete('/posts/:id', portfolioController.deletePost);
 module.exports = router;

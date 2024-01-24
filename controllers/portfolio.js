@@ -163,6 +163,15 @@ const portfolioController = {
       res.status(500).json({ success: false, error: 'Internal Server Error' });
     }
   },
+  getAllRecentPosts: async (req, res) => {
+    try {
+      const posts = await Post.find().select("coverImage title details");
+      res.json({ success: true, data: posts });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, error: 'Internal Server Error' });
+    }
+  },
   getSinglePost: async (req, res) => {
     const postId = req.params.id;
 
