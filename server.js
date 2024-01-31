@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const postRoutes = require('./routes/portfolio');
+const videoRoutes = require('./routes/videoRoutes');
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/portfolio', postRoutes);
+app.use('/api/video', videoRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
