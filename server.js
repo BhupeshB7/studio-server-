@@ -6,7 +6,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const postRoutes = require('./routes/portfolio');
 const videoRoutes = require('./routes/videoRoutes');
-
+const contactFormRoutes = require('./routes/contatcForm');
 dotenv.config();
 
 const app = express();
@@ -40,6 +40,7 @@ app.use(express.json());
 
 app.use('/api/portfolio', postRoutes);
 app.use('/api/video', videoRoutes);
+app.use('/api/contactForm', contactFormRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
