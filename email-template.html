@@ -4,75 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form Submission</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <style>
-      body {
-        font-family: "Arial", sans-serif;
-        background-color: #f4f4f4 !important;
-        color: #333;
-        padding: 20px;
-      }
-
-      .container {
-        width: 100%;
-        min-width: 300px !important;
-        margin: 0 auto;
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
-        height: 100%;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
+        body{
+            padding: 20px;
+        }
       .border {
         background: #3f2323;
         height: 13px;
-        width: 100%;
-        min-width: 300px !important;
+        width: 18rem;
+        padding-top: -5px;
+        min-width: 250px !important;
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
-      }
-      h2 {
-        color: #12093b;
-        font-style: italic;
-        font-weight: bold;
-        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-      }
-      .heading {
-        color: #ae682f;
-        font-size: 20px !important;
-        font-weight: 650;
-        font-style: italic;
-        font-family: serif;
-        margin-top: 0;
-      }
-      p {
-        color: #4f1717;
-        font-size: 14px !important;
-        font-weight: normal;
-        padding: 0px !important;
-        margin: 5px;
-      }
-      strong {
-        color: rgb(32, 102, 78);
       }
     </style>
   </head>
 
   <body>
     <div class="border"></div>
-    <div class="container">
-      <h2>Welcome</h2>
+    <div class="card" style="width: 18rem">
+        <div class="card-title p-4">Welcome,</div>
       <img
         src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?size=626&ext=jpg&ga=GA1.1.260354095.1700988836&semt=ais"
-        height="200px"
-        width="100%"
-        alt="support_icon"
+        class="card-img-top"
+        alt="..."
       />
-      <p class="heading">New Contact Form Submission</p>
-      <p><strong>Name:</strong> <%= name %></p>
-      <p><strong>Email:</strong> <%= email %></p>
-      <p><strong>Message:</strong> <%= message %></p>
+      <div class="card-body">
+        <p class="card-title">New Contact Form Submission</p>
+        <h5 class="card-text">Name:<%= name %></h5>
+        <p class="card-text">
+            <%= email %>
+        </p>
+        <p class="card-text">
+          Message:  <%= message %>
+        </p>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
     </div>
   </body>
 </html>
