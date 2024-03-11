@@ -35,7 +35,9 @@ mongoose
   })
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.error(error));
-app.use(cors());
+app.use(cors(
+ { origin:"https://eye-studio-bhupeshb7s-projects.vercel.app/"}
+));
 app.use(express.json());
 
 app.use('/api/portfolio', postRoutes);
